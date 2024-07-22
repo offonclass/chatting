@@ -2,7 +2,7 @@ const ws = require('ws');
 const express = require('express')
 const http = require('http')
 const app = express()
-const PORT = 8000
+const PORT = 80
 
 const server = http.createServer(app)
 const wss = new ws.Server({ server: server })

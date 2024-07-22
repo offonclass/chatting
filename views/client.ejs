@@ -13,10 +13,10 @@
     <form id="chat">
         <input type="text" id="user" placeholder="이름">
         <input type="text" id="msg" placeholder="내용">
-        <button>입력</button>
+        <button>입력!!</button>
     </form>
     <script>
-        const socket = new WebSocket("ws://localhost:8000")
+        const socket = new WebSocket("ws://3.38.252.133")
         const ul = document.querySelector('ul')
         const chatForm = document.querySelector('#chat')
 
@@ -37,6 +37,7 @@
             const msg = chatForm.querySelector('#msg')
 
             socket.send(JSON.stringify({ user: user.value, message: msg.value }))
+            msg.value = '';
         })
 
         // 오류 이벤트
